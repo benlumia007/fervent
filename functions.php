@@ -11,7 +11,7 @@ which is stored in the theme's root directory in the theme folder.
 @package        Fervent WordPress Theme
 @copyright      Copyright (C) 2018. Benjamin Lu
 @license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://luthemes.com/)
+@author         Benjamin Lu (https://fervent.com/)
 ===========================================================================================================
 */
 /*
@@ -61,6 +61,36 @@ function fervent_enqueue_scripts_and_styles_setup() {
     */
     wp_enqueue_style('fervent-style', get_stylesheet_uri());
     wp_enqueue_style('fervent-normalize', get_template_directory_uri() . '/css/normalize.css', '08012018', true);
+
+    /*
+    =======================================================================================================
+    Enable and activate Google Fonts (Sanchez and Merriweather Sans) locally for fervent. For more 
+    information regarding this feature, please go the following url to begin the awesomeness of Google 
+    WebFonts Helper (https://google-webfonts-helper.herokuapp.com/fonts)
+    =======================================================================================================
+    */
+    wp_enqueue_style('fervent-local-fonts', get_template_directory_uri() . '/extras/fonts/custom-fonts.css', '08012018', true);
+    
+    /*
+    =======================================================================================================
+    Enable and activate Font Awesome 4.7 locally for fervent. For more information about Font Awesome, 
+    please navigate to the URL for more information. (http://fontawesome.io/)
+    =======================================================================================================
+    */
+    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/extras/font-awesome/css/font-awesome.css', '08012018', true);
+
+    /*
+    =======================================================================================================
+    Enable and activate JavaScript/JQuery to support Navigation for Primary Navigation for fervent. This 
+    allows you to use click feature for dropdowns and multiple depths, When using this new feature of the 
+    navigation. The Menu for mobile side is now at the bottom of the page.
+    =======================================================================================================
+    */
+    wp_enqueue_script('fervent-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '08012018', true);
+	wp_localize_script('fervent-navigation', 'ferventScreenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . esc_html__('expand child menu', 'fervent') . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . esc_html__('collapse child menu', 'fervent') . '</span>',
+    ));
 }
 add_action('wp_enqueue_scripts', 'fervent_enqueue_scripts_and_styles_setup');
 /*
