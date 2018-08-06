@@ -81,6 +81,32 @@ Table of Content
  5.0 - Accessibility
 ===========================================================================================================
 */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+.screen-reader-text:focus {
+    background: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px;
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
 
 /*
 ===========================================================================================================
@@ -213,7 +239,7 @@ Table of Content
     left: 0;
     line-height: 1.875em;
     position: relative;
-    top: 0.063em;
+    top: 0;
     width: 1.875em;
 }
 
