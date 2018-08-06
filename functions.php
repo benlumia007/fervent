@@ -2,13 +2,13 @@
 <?php
 /*
 ===========================================================================================================
-fervent - functions.php
+Fervent - functions.php
 ===========================================================================================================
 This is the most generic template file in a WordPress theme and is one of the two required files for a 
 theme. This functions.php template file allows you to add features and functionality to a WordPress theme 
 which is stored in the theme's root directory in the theme folder.
 
-@package        fervent WordPress Theme
+@package        Fervent WordPress Theme
 @copyright      Copyright (C) 2018. Benjamin Lu
 @license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
 @author         Benjamin Lu (https://luthemes.com/)

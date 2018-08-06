@@ -1,11 +1,12 @@
 /*
 ===========================================================================================================
-fervent - normalize.css
+Fervent - normalize.css
 ===========================================================================================================
 This is the most generic template file in a WordPress theme and is one of the required file for a theme. 
 This normalize.css template file makes browsers render all elements more consistently and in line with
 modern standards. It is precisly targets only the styles that needs normalizing.
-@package        fervent WordPress Theme
+
+@package        Fervent WordPress Theme
 @copyright      Copyright (C) 2018. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
 @author         Benjamin Lu (https://www.luthemes.com/)
