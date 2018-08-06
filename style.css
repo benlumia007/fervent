@@ -31,7 +31,7 @@ Table of Content
 10.0 - Navigation (Secondary Navigation)
 11.0 - Navigation (Pagination Navigation)
 12.0 - Navigation (Social Navigation)
-13.0 - Header Area (Header Image)
+13.0 - Header Area
 14.0 - Content Area (Posts and Pages)
 15.0 - Content Area (Archives)
 16.0 - Content Area (Comments)
@@ -87,6 +87,12 @@ Table of Content
  6.0 - Clearings
 ===========================================================================================================
 */
+.site-container:before,
+.site-container:after {
+    clear: both;
+    content: "";
+    display: table;
+}
 
 /*
 ===========================================================================================================
@@ -94,6 +100,7 @@ Table of Content
 ===========================================================================================================
 */
 .site-container {
+    border: 0.063em solid #000;
     margin: 0 auto;
     max-width: 75.375em;
 }
@@ -109,6 +116,172 @@ Table of Content
  9.0 - Navigation (Primary Navigation)
 ===========================================================================================================
 */
+.main-navigation {
+    background: #000000;
+}
+
+.primary-navigation {
+    display: block;
+    width: 100%;
+}
+
+.primary-navigation ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+}
+
+.primary-navigation li {
+	border-top: 0.063em solid #eaeaea;
+	border-top: 0.063em solid rgba(51, 51, 51, 0.1);
+	position: relative;
+}
+
+.primary-navigation ul ul {
+    display: none;
+    margin-left: 0.5em;
+}
+
+.primary-navigation a {
+    color: #ffffff;
+    display: block;
+    line-height: 1.5em;
+    padding: 0.5em 1em;
+    position: relative;
+    text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus {
+    background: #ffffff;
+    color: #000000;
+}
+
+.primary navigation a,
+.primary-navigation ul ul li:lastchild a {
+    border-bottom: 0.063em solid #ffffff;
+}
+
+.primary-navigation ul li:last-child a {
+    border-bottom: none;
+}
+
+.primary-navigation ul .toggled-on {
+    display: block;
+}
+
+.primary-navigation .current-menu-item > a,
+.primary-navigation .current-menu-ancestor > a,
+.primary-navigation .current_page_item > a,
+.primary-navigation .current_page_ancestor > a {
+	font-weight: 700;
+}
+
+.primary-navigation .nav-menu > ul > li:first-child,
+.primary-navigation .nav-menu > li:first-child {
+	border-top: 0;
+}
+
+.primary-navigation .menu-item-has-children > a,
+.primary-navigation .page_item_has_children > a{
+	padding-right: 3em;
+}
+
+.no-js .primary-navigation ul ul {
+	display: block;
+}
+
+.dropdown-toggle {
+    background: #000000;
+    border: 0.063em solid #ffffff;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+    color: #ffffff;
+    font-family: 'fontawesome';
+    height: 2em;
+    padding: 0;
+    position: absolute;
+    right: 0.250em;
+    top: 0.188em;
+    width: 2em;
+}
+
+.dropdown-toggle:after {
+    font-size: 1.125em;
+    content: "\f078";
+    left: 0;
+    line-height: 1.875em;
+    position: relative;
+    top: 0.063em;
+    width: 1.875em;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background: #ffffff;
+	color: #000000;
+}
+
+.dropdown-toggle.toggle-on:after {
+	content: "\f077";
+}
+
+.primary-navigation.toggled {
+    bottom: 0;
+    padding: 1em;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-menu {
+    background: #000000;
+	padding: 1em;
+	margin-bottom: 3em;
+}
+
+.primary-navigation.toggled ul {
+	max-height: calc(100vh - 8em);
+	overflow-y: auto;
+}
+
+.primary-navigation.toggled ul ul {
+	display: none;
+}
+
+.primary-navigation.toggled ul ul.toggled-on,
+.primary-navigation.toggled ul ul.toggled-on > ul {
+	display: block;
+}
+
+.menu-toggle {
+	background-color: #000;
+	border: solid 2px #fff;
+	bottom: 1em;
+	color: #fff;
+    display: none;
+	font-family: 'Sanchez', serif;
+	font-size: 1em;
+	left: 1em;
+    padding: 0.4em;
+	position: fixed;
+	transition: all ease-out 400ms;
+	z-index: 100;
+}
+
+.menu-toggle.hide {
+	bottom: -2.5em;
+}
+
+.toggled .menu-toggle.hide {
+	bottom: 1em;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	text-decoration: underline;
+}
+
 
 /*
 ===========================================================================================================
@@ -130,9 +303,14 @@ Table of Content
 
 /*
 ===========================================================================================================
-13.0 - Header Area (Header Image)
+13.0 - Header Area
 ===========================================================================================================
 */
+.site-branding .site-title,
+.site-branding .site-description {
+    margin: 0;
+    padding: 0;
+}
 
 /*
 ===========================================================================================================
@@ -235,3 +413,18 @@ Table of Content
 30.0 - Media Queries (Table Large 75.375em (1206px))
 ===========================================================================================================
 */
+@media screen and (min-width: 1206px) {
+    .branding-navigation {
+        padding: 1.125em;
+    }
+
+    .site-branding {
+        float: left;
+        width: 27.692307692%;
+    }
+
+    .main-navigation {
+        float: right;
+        width: 70.769230769%;
+    }
+}
