@@ -101,7 +101,7 @@ Table of Content
 */
 .site-container {
     border: 0.063em solid #000;
-    margin: 0 auto;
+    margin: 1.125em auto;
     max-width: 75.375em;
 }
 
@@ -312,6 +312,10 @@ Table of Content
     padding: 0;
 }
 
+.site-branding .site-title a {
+    font-size: 1.125em;
+}
+
 /*
 ===========================================================================================================
 14.0 - Content Area (Posts and Pages)
@@ -424,7 +428,118 @@ Table of Content
     }
 
     .main-navigation {
+        background: transparent;
         float: right;
         width: 70.769230769%;
     }
+    
+    .primary-navigation {
+        clear: none;
+    }
+
+	.primary-navigation,
+	.primary-navigation.toggled {
+        background: transparent;
+		position: relative;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+    
+	.nav-menu {
+		padding: .4em;
+		background-color: transparent;
+        margin: 0;
+    }
+    
+    .nav-menu a {
+        color: #ffffff;
+    }
+    
+    .nav-menu a:hover {
+        color: #ffffff;
+    }
+	
+	.primary-navigation ul,
+	.primary-navigation.toggled ul {
+        background: transparent;
+		max-height: none;
+		padding-left: 0;
+		text-align: right; 
+        
+	}
+	
+	.primary-navigation.toggled ul {
+		overflow-y: visible;
+	}
+	
+	/* Display the menu items in a horizontal order */
+	.primary-navigation li {
+		display: inline-block;
+		border: none;
+	}
+	
+	/* Add an outline to the drop-down menus */
+	.primary-navigation ul ul {
+		outline: 1px solid #333;
+	}
+	
+	/* Left-align drop-down menu items */
+	.primary-navigation li li {
+		display: block;
+		text-align: left;
+	}
+    
+    .primary-navigation a {
+        color: #000000;
+        padding: 0.5em 1em;
+    }
+	
+	.primary-navigation a,
+	.primary-navigation ul ul li:last-child a {
+		border-bottom: none;
+	}
+    
+    .primary-navigation ul ul li a {
+        color: #ffffff;
+    }
+	
+	/* Add an outline on hovered and focused menu items */
+	.primary-navigation a:hover,
+	.primary-navigation a:focus {
+		background: transparent;
+		color: #000000;
+		text-decoration: underline;
+		outline: solid 1px #b3b3b3;
+	}
+	
+	/* Create hover and focus contrast on drop-down items */
+	.primary-navigation li li a:hover,
+	.primary-navigation li li a:focus {
+		background: #eee;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	/* Position drop-down menus absolutely */
+	.primary-navigation ul ul.toggled-on {
+		position: absolute;
+		width: 17em;
+		display: block;
+		z-index: 10;
+        right: 0.6em;
+		margin-left: 0;
+		background: #000;
+	}
+	
+	.primary-navigation ul ul ul.toggled-on {
+		right: 0;
+        padding-left: 1em;
+        position: relative;
+	}
+	
+	/* Indent 3rd level drop-down menus */
+	.primary-navigation ul ul ul a {
+		padding-left: 2em;
+}
 }
