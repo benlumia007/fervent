@@ -40,7 +40,16 @@ add_action('after_setup_theme', 'fervent_theme_setup');
 ===========================================================================================================
 */
 function fervent_enqueue_scripts_and_styles_setup() {
-    
+    /*
+    =======================================================================================================
+    Enable and activate the main stylesheet and custom stylesheet if available for Fervent WordPress theme. 
+    The main stylesheet should be enqueued rather than using @import. The other custom stylesheet is theme 
+    normalize.css that is to makes browsers render all elements more consistently and in line with modern 
+    standards. It is precisly targets only the styles that needs normalizing.
+    =======================================================================================================
+    */
+    wp_enqueue_style('fervent-style', get_stylesheet_uri());
+    wp_enqueue_style('fervent-normalize', get_template_directory_uri() . '/css/normalize.css', '08012018', true);
 }
 add_action('wp_enqueue_scripts', 'fervent_enqueue_scripts_and_styles_setup');
 /*
