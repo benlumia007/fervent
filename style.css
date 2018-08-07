@@ -164,7 +164,9 @@ body {
 ===========================================================================================================
 */
 .site-container:before,
-.site-container:after {
+.site-container:after,
+.branding-navigation:before,
+.branding-navigation:after {
     clear: both;
     content: "";
     display: table;
@@ -404,6 +406,11 @@ a:focus {
     color: #22a6ee;
 }
 
+.site-header {
+    border: 0.063em solid #000000;
+    margin: 1.125em;
+}
+
 /*
 ===========================================================================================================
 14.0 - Content Area (Posts and Pages)
@@ -507,7 +514,8 @@ a:focus {
 */
 @media screen and (min-width: 1206px) {
     .branding-navigation {
-        padding: 1.125em;
+        border: 0.063em solid #000000;
+        margin: 1.125em;
     }
 
     .site-branding {
