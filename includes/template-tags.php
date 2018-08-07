@@ -81,14 +81,15 @@ function fervent_entry_taxonomies_setup() {
     $cat_list = get_the_category_list(__(' | ', 'fervent'));
     $tag_list = get_the_tag_list('', __(' | ', 'fervent'));
     if ($cat_list) {
-        printf('<div class="cat-link"> %1$s <span class="cat-list"l><b><i>%2$s</i></b></span></div>',
-        __('<i class="fa fa-folder-open-o"></i> Posted In', 'fervent'),  
+        printf('<div class="cat-link"><i class="fa fa-folder-open-o"></i> %1$s <span class="cat-list"l><b><i>%2$s</i></b></span></div>',
+        esc_html__('Posted In', 'fervent'),  
         $cat_list
         );
     }
+
     if ($tag_list) {
-        printf('<div class="tag-link">%1$s <span class="tag-list"><b><i>%2$s</i></b></span></div>',
-        __('<i class="fa fa-tags"></i> Tagged', 'fervent'),  
+        printf('<div class="tag-link"><i class="fa fa-tags"></i> %1$s <span class="tag-list"><b><i>%2$s</i></b></span></div>',
+        esc_html__('Tagged', 'fervent'),  
         $tag_list 
         );
     }
