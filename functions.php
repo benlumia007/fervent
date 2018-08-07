@@ -33,6 +33,22 @@ Table of Content
 function fervent_theme_setup() {
     /*
     =======================================================================================================
+    Enable and activate add_theme_support('title-tag); for fervent WordPress Theme. This feature should be 
+    used in place instead of wp_title() function. 
+    =======================================================================================================
+    */
+    add_theme_support('title-tag');
+    /*
+    =======================================================================================================
+    Enable and activate add_theme_support('automatic-feed-links'); for fervent WordPress Theme. This 
+    feature when enabled allows feed links for posts and comments in the head. This should be used in place 
+    of the deprecated automatic_feed_link(); function.
+    =======================================================================================================
+    */
+    add_theme_support('automatic-feed-links');
+
+    /*
+    =======================================================================================================
     Enable and activate register_nav_menus(); for Fervent WordPress theme. This feature when enabled,
     you can create a Primary Navigation, Secondary Navigation, and Social Navigation menus in the dashboard
     under menus.
@@ -43,6 +59,30 @@ function fervent_theme_setup() {
         'secondary-navigation'  => esc_html__('Secondary Navigation', 'fervent'),
         'social-navigation'     => esc_html__('Social Navigation', 'fervent')
     ));
+
+    /*
+    =======================================================================================================
+    Enable and activate add_theme_support('html5'); for fervent WordPress Theme. This feature allows the 
+    use of HTML5 markup for search forms, comment forms, comment list, gallery, and captions.
+    =======================================================================================================
+    */
+    add_theme_support('html5', array(
+        'comment-list', 
+        'comment-form', 
+        'search-form', 
+        'gallery', 
+        'caption'
+    ));
+
+    /*
+    =======================================================================================================
+    Enable and activate add_theme_support('post-thumbnails); for fervent WordPress Theme. This feature 
+    enables Post Thumbnails (Featured Images) support for a theme. If you wish to display thumbnails, 
+    use the following to display the_post_thumbnail();. If you need to to check of there is a post thumbnail, 
+    then use has_post_thumbnail();.
+    =======================================================================================================
+    */
+    add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'fervent_theme_setup');
 /*
@@ -91,6 +131,16 @@ function fervent_enqueue_scripts_and_styles_setup() {
 		'expand'   => '<span class="screen-reader-text">' . esc_html__('expand child menu', 'fervent') . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . esc_html__('collapse child menu', 'fervent') . '</span>',
     ));
+
+    /*
+    =======================================================================================================
+    Enable and activate the threaded comments for fervent. This allows users to comment by clicking on reply 
+    so that it gets nested to the comments you are trying to respnse too. 
+    =======================================================================================================
+    */
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 }
 add_action('wp_enqueue_scripts', 'fervent_enqueue_scripts_and_styles_setup');
 /*
@@ -99,7 +149,7 @@ add_action('wp_enqueue_scripts', 'fervent_enqueue_scripts_and_styles_setup');
 ===========================================================================================================
 */
 function fervent_content_width_setup() {
-    
+    $GLOBALS['content_width'] = apply_filters('fervent_content_width_setup', 810);
 }
 add_action('after_setup_theme', 'fervent_content_width_setup', 0);
 /*
@@ -108,7 +158,21 @@ add_action('after_setup_theme', 'fervent_content_width_setup', 0);
 ===========================================================================================================
 */
 function fervent_register_sidebars_setup() {
-    
+    /*
+    ============================================================================================
+    Enable and activate Primary Sidebar for Fervent WordPress Theme. The Primary Sidebar
+    should only show in the blog posts only rather in the pages. 
+    ============================================================================================
+    */
+    register_sidebar(array(
+        'name'          => esc_html__('Primary Sidebar', 'fervent'),
+        'description'   => esc_html__('Add widgets here to appear in your sidebar on Blog Posts and Archives only', 'fervent'),
+        'id'            => 'primary-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 add_action('widgets_init', 'fervent_register_sidebars_setup');
 /*
@@ -117,3 +181,4 @@ add_action('widgets_init', 'fervent_register_sidebars_setup');
 ===========================================================================================================
 */
 require_once(get_template_directory() . '/framework/framework.php');
+require_once(get_template_directory() . '/includes/template-tags.php');
