@@ -490,6 +490,13 @@ a:focus {
     width: 27.692307692%;
 }
 
+.no-sidebar .widget-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2.250em;
+    margin-top: 2.250em;
+}
+
 .widget-area .search-form:before,
 .widget-area .search-form:after {
     clear: both;
