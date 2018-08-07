@@ -31,17 +31,7 @@ also displays the navigation menu as well or any extra features.
                 <h4 class="site-description"><?php bloginfo('description'); ?></h4>
             </div>
             <div id="main-navigation" class="main-navigation">
-                <?php if (has_nav_menu('primary-navigation')) { ?>
-                    <nav id="site-navigation" class="primary-navigation">
-                        <button class="menu-toggle" aria-conrol="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'fervent'); ?></button>
-                        <?php wp_nav_menu(array(
-                            'theme_location'    => 'primary-navigation',
-                            'menu_id'           => 'primary-menu',
-                            'menu_class'        => 'nav-menu'   
-                        )); 
-                    ?>
-                    </nav>
-                <?php } ?>
+                <?php fervent_do_primary_navigation_setup(); ?>
             </div>
         </div>
         <header id="site-header" class="site-header">
