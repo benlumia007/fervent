@@ -29,3 +29,4 @@ Table of Content
 */
 require_once(get_template_directory() . '/framework/core/custom-header.php');
 require_once(get_template_directory() . '/framework/customize/control-radio-image.php');
+require_once(get_template_directory() . '/framework/menu/primary-navigation.php');
