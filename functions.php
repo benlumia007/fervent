@@ -116,3 +116,4 @@ add_action('widgets_init', 'fervent_register_sidebars_setup');
  5.0 - Required Files
 ===========================================================================================================
 */
+require_once(get_template_directory() . '/framework/framework.php');
