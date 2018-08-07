@@ -110,6 +110,16 @@ h6 {
  2.0 - Elements
 ===========================================================================================================
 */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { 
+	box-sizing: inherit;
+}
+
 body {
     font-family: 'Merriweather', serif;
 }
@@ -1042,6 +1052,66 @@ p.comment-awaiting-moderation {
 25.0 - Media Queries (Mobile Medium 37.50em (600px))
 ===========================================================================================================
 */
+@media screen and (min-height: 30.063em) and (max-width: 37.50em) {
+    .site-branding {
+        margin: 1.125em auto 0 auto;
+        padding: 1.125em;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .site-branding .site-title,
+    .site-branding .site-description {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .site-branding .site-title a {
+        font-size: 1.250em;
+    }
+
+    .site-content {
+        margin: 1.125em;
+    }
+
+    .menu-toggle,
+    .primary-navigation.toggled ul {
+        display: block;
+    }
+    
+	.primary-navigation ul {
+		display: none;
+	}
+    
+    .primary-navigation.toggled {
+        padding: 0.1em;
+    }
+    
+    .nav-menu {
+        margin-bottom: 3.6em;
+    }
+    
+    .primary-navigation .nav-menu {
+        display: none;
+    }
+    
+    .primary-navigation.toggled .nav-menu {
+        display: block;
+        margin: 1em 1em 3.6em 1em;
+    }
+    
+    .left-sidebar .content-area,
+    .right-sidebar .content-area {
+        float: none;
+        width: 100%;
+    }
+    
+    .right-sidebar .widget-area {
+        float: none;
+        margin-top: 1.125em;
+        width: 100%;
+    }
+}
 
 /*
 ===========================================================================================================
