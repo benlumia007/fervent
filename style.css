@@ -412,6 +412,25 @@ a:focus {
 14.0 - Content Area (Posts and Pages)
 ===========================================================================================================
 */
+.content-area .post {
+    border-bottom: 0.063em solid #cccccc;
+    margin-bottom: 2em;
+}
+
+.entry-header {
+    border-bottom: 0.188em solid #22a6ee;
+}
+
+.entry-header .entry-title {
+    background: #22a6ee;
+    display: inline-block;
+    margin: 0;
+    padding: 0.375em;
+}
+
+.entry-header .entry-title a {
+    color: #ffffff
+}
 
 /*
 ===========================================================================================================
