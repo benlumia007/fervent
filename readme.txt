@@ -57,6 +57,8 @@ Changelog
 ===============================================================================================================
 Version: 0.0.7
 - Add 404
+- Add CSS Grid System for Galleries
+- Minor Changes and Do Not Repeat Functions
 
 Version: 0.0.6
 - Add Content None for 404
