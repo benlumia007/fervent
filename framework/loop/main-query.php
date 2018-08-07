@@ -27,8 +27,8 @@ Table of Content
  1.0 - Main Query (Content with Post Format)
 ===========================================================================================================
 */
-function fervent_do_main_content_post_format_setup() {
-    do_action('fervent_do_main_content_post_format_setup');
+function fervent_do_main_query_content_post_format_setup() {
+    do_action('fervent_do_main_query_content_post_format_setup');
 }
 
 function fervent_output_main_content_post_format_setup() {
@@ -41,4 +41,4 @@ function fervent_output_main_content_post_format_setup() {
             get_template_part('template-parts/content', 'none');
     endif;
 }
-add_action('fervent_do_main_content_post_format_setup', 'fervent_output_main_content_post_format_setup');
+add_action('fervent_do_main_query_content_post_format_setup', 'fervent_output_main_content_post_format_setup');
