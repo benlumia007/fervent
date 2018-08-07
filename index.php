@@ -45,6 +45,15 @@ template files, WordPress may have default files or functions to perform their j
                 <?php } ?>
             </div>
         </div>
+        <header id="site-header" class="site-header">
+            <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /> 
+        </header>
+        <section id="site-content" class="site-content">
+
+        </section>
+        <footer id="site-footer" class="site-footer">
+
+        </footer>
     </section>
     <?php wp_footer(); ?>
 </body>
