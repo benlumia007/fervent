@@ -16,9 +16,9 @@ This is the most generic template file in a WordPress theme and is one required 
 <article id="post-0" <?php post_class('post'); ?>>
     <header class="entry-header">
         <?php if (is_home() && current_user_can('publish_posts')) { ?>
-            <h1 class="entry-title"><?php esc_html_e('Getting Started', 'benjlu'); ?></h1>
+            <h1 class="entry-title"><?php esc_html_e('Getting Started', 'fervent'); ?></h1>
         <?php } else { ?>
-            <h1 class="entry-title"><?php esc_html_e('Nothing Found', 'benjlu'); ?></h1>
+            <h1 class="entry-title"><?php esc_html_e('Nothing Found', 'fervent'); ?></h1>
         <?php } ?>
     </header>
     <div class="entry-content">
