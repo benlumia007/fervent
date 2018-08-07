@@ -403,17 +403,8 @@ a:focus {
     padding: 0;
 }
 
-.site-branding .site-title a {
-    font-size: 1.125em;
-}
-
 .site-branding .site-description {
     color: #22a6ee;
-}
-
-.site-header {
-    border: 0.063em solid #000000;
-    margin: 1.125em;
 }
 
 /*
@@ -519,7 +510,6 @@ a:focus {
 */
 @media screen and (min-width: 1206px) {
     .branding-navigation {
-        border: 0.063em solid #000000;
         margin: 1.125em;
     }
 
@@ -532,6 +522,14 @@ a:focus {
         background: transparent;
         float: right;
         width: 70.769230769%;
+    }
+
+    .site-header {
+        margin: 1.125em;
+    }
+
+    .site-content {
+        margin: 1.125em;
     }
     
     .primary-navigation {
