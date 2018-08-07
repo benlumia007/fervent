@@ -19,6 +19,8 @@ do_action(); and keep the codes clean as possible.
 Table of Content
 ===========================================================================================================
  1.0 - Main Query (Content with Post Format)
+ 2.0 - Main Query (Content Single)
+ 3.0 - Main Query (Content Page)
 ===========================================================================================================
 */
 
@@ -42,3 +44,45 @@ function fervent_output_main_content_post_format_setup() {
     endif;
 }
 add_action('fervent_do_main_query_content_post_format_setup', 'fervent_output_main_content_post_format_setup');
+
+/*
+===========================================================================================================
+ 2.0 - Main Query (Content Single)
+===========================================================================================================
+*/
+function fervent_do_main_query_content_single_setup() {
+    do_action('fervent_do_main_query_content_single_setup');
+}
+
+function fervent_output_main_query_content_single_setup() {
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            get_template_part('template-parts/content', 'single');
+    endwhile;
+            the_posts_pagination();
+    else :
+            get_template_part('template-parts/content', 'none');
+    endif;
+}
+add_action('fervent_do_main_query_content_single_setup', 'fervent_output_main_query_content_single_setup');
+
+/*
+===========================================================================================================
+ 3.0 - Main Query (Content Page)
+===========================================================================================================
+*/
+function fervent_do_main_query_content_page_setup() {
+    do_action('fervent_do_main_query_content_page_setup');
+}
+
+function fervent_output_main_query_content_page_setup() {
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            get_template_part('template-parts/content', 'page');
+    endwhile;
+            the_posts_pagination();
+    else :
+            get_template_part('template-parts/content', 'none');
+    endif;
+}
+add_action('fervent_do_main_query_content_page_setup', 'fervent_output_main_query_content_page_setup');

@@ -22,42 +22,21 @@ perform their jobs.
     <?php if ('left-sidebar' == get_theme_mod('global_layouts', 'left-sidebar')) { ?>
         <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'left-sidebar')); ?>">
             <div id="content-area" class="content-area">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <?php get_template_part('template-parts/content', 'page'); ?>
-                <?php endwhile; ?>
-                        <?php the_posts_pagination(); ?>
-                <?php else : ?>
-                        <?php get_template_part('template-parts/content', 'none'); ?>
-                <?php endif; ?>
+                <?php fervent_do_main_query_content_page_setup(); ?>
             </div>
             <?php get_sidebar(); ?>
         </section>
     <?php } else if ('right-sidebar' == get_theme_mod('global_layouts', 'right-sidebar')) { ?>
         <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'left-sidebar')); ?>">
             <div id="content-area" class="content-area">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <?php get_template_part('template-parts/content', 'page'); ?>
-                <?php endwhile; ?>
-                        <?php the_posts_pagination(); ?>
-                <?php else : ?>
-                        <?php get_template_part('template-parts/content', 'none'); ?>
-                <?php endif; ?>
+                <?php fervent_do_main_query_content_page_setup(); ?>
             </div>
             <?php get_sidebar(); ?>
         </section>
     <?php } else { ?>
         <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'left-sidebar')); ?>">
             <div id="content-area" class="content-area">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <?php get_template_part('template-parts/content', 'page'); ?>
-                <?php endwhile; ?>
-                        <?php the_posts_pagination(); ?>
-                <?php else : ?>
-                        <?php get_template_part('template-parts/content', 'none'); ?>
-                <?php endif; ?>
+                <?php fervent_do_main_query_content_page_setup(); ?>
             </div>
         </section>
     <?php } ?>
