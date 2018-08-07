@@ -531,6 +531,11 @@ a:focus {
     .site-content {
         margin: 1.125em;
     }
+
+    .site-footer {
+        margin: 1.125em;
+        text-align: center;
+    }
     
     .primary-navigation {
         clear: none;
