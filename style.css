@@ -9,7 +9,7 @@ Author URI: https://luthemes.com/
 Description: Fervent is a basic responsive theme that allows you as users to control the content the way you want it.
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags:
+Tags: custom-header
 Version: 0.0.5
 Text Domain: fervent
 ===========================================================================================================
@@ -130,6 +130,22 @@ img {
  4.0 - Alignments
 ===========================================================================================================
 */
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /*
 ===========================================================================================================
@@ -173,7 +189,11 @@ img {
 .branding-navigation:before,
 .branding-navigation:after,
 .site-content:before,
-.site-content:after {
+.site-content:after,
+.content-area:before,
+.content-area:after,
+.entry-content:before,
+.entry-content:after  {
     clear: both;
     content: "";
     display: table;
@@ -428,14 +448,17 @@ a:focus {
 .content-area .page {
     border-bottom: 0.063em solid #cccccc;
     margin-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 .content-area .entry-header {
     border-bottom: 0.188em solid #22a6ee;
+    margin-bottom: 0.313em;
 }
 
 .content-area .entry-header .entry-title {
     background: #22a6ee;
+    color: #ffffff;
     display: inline-block;
     margin: 0;
     padding: 0.375em;
@@ -443,6 +466,50 @@ a:focus {
 
 .content-area .entry-header .entry-title a {
     color: #ffffff
+}
+
+.content-area .post .entry-metadata,
+.content-area .attachment .entry-metadata {
+    background: #eeeeee;
+    border-left: 5px solid #22a6ee;
+    margin: 1.250em 0;
+    padding: 1em;
+    text-align: center;
+}
+
+.content-area .post .entry-metadata .avatar,
+.content-area .attachment .entry-metadata .avatar {
+    border: 0.500em solid #cccccc;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.content-area .post .entry-metadata .by-author,
+.content-area .attachment .entry-metadata .by-author {
+    display: block;
+    font-family: 'Fira Sans', serif;
+    font-size: 1.250em;
+}
+
+.content-area .post .entry-metadata .published,
+.content-area .post .entry-metadata .entry-comments,
+.content-area .attachment .entry-metadata .published,
+.content-area .attachment .entry-metadata .entry-comments {
+    display: block;
+    padding: 0.063em 0;
+    font-size: 12px;
+}
+
+.content-area .post .entry-excerpt,
+.content-area .post .entry-content,
+.content-area .page .entry-content {
+    line-height: 1.6em;
+    margin: 1.125em 0;
+}
+
+.content-area .sticky {
+
 }
 
 /*
@@ -456,6 +523,249 @@ a:focus {
 16.0 - Content Area (Comments)
 ===========================================================================================================
 */
+.comments-area {
+    margin: 0.938em 0;   
+}
+
+.comments-title {
+    background: #999999;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-list {
+    margin: 0;
+    padding: 0;
+}
+
+.comment-body {
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.comments-area > ol  {
+    list-style-type: none;
+}
+
+.comment-author .avatar {
+    border: 4px solid #cccccc;
+    border-radius: 50%;
+    float: left; 
+    display: block;
+    margin-right: 10px;
+}
+
+.comment-author .fn {
+    font-size: 1.250em;
+    margin: 0;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.6em;
+    padding: 0;
+}
+
+.comment-meta {
+    font-size: 12px;
+}
+
+.comment-content {
+    display: block;
+    line-height: 1.6em;
+    margin: 2.625em 0.5em 0 0.5em;
+}
+
+
+.comments-area .says {
+    display: none;
+}
+
+.reply {
+	margin-bottom: 1.5em;
+	text-align: right;
+}
+
+.reply a {
+    background: #ffffff;
+    border: 0.063em solid #cccccc;
+    color: #373737;
+	display: inline-block;
+	padding: 0.5em 1.4em;
+	text-decoration: none;
+}
+
+.reply a:hover,
+.reply a:focus {
+	color: #373737;
+    text-decoration: underline;
+}
+
+.comment-list ol {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+ol.children {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.content-meta {
+    margin-left: 70px;
+}
+
+.comment-navigation {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.comment-navigation i {
+    padding: 10px;
+}
+
+.comment-previous {
+    float: left;
+}
+.comment-next {
+    float: right;
+}
+
+.bypostauthor > .comment-body {
+    background: #f0f0f0; 
+    padding: 0.625em;
+    position: relative;
+}
+
+.comment-reply-title {
+    font-size: 1.250em;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-form p {
+    margin: 0 0 1.5em 0;
+}
+
+.required {
+    color: #FF0000;
+    font-size: 0.625em;
+}
+
+.comment-awaiting-moderation {
+    background: #84BD68;
+    color: #ffffff;
+    font-size: 0.750em;
+    padding: 0.188em 0.250em;
+}
+
+.form-allowed-tags {
+    font-size: 0.813em;
+    width: 37.5em;
+}
+
+.comment-form .comment-form-author {
+    float: left;
+    display: block;
+}
+
+.comment-form .comment-form-author:before {
+    font-family: 'fontawesome';
+    content: "\f007";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
+}
+
+.comment-form .comment-form-email {
+    float: right;
+    display: block;
+}
+
+.comment-form .comment-form-email:before {
+    font-family: 'fontawesome';
+    content: "\f0e0";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
+}
+
+
+.comment-form .comment-form-url {
+    margin-bottom: 1.3em;
+    width: 100%;
+}
+
+.comment-form .comment-form-url:before {
+    font-family: 'fontawesome';
+    content: "\f0ac";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
+}
+
+.comment-form .comment-form-comment label,
+.comment-form .comment-form-author label,
+.comment-form .comment-form-email label,
+.comment-form .comment-form-url label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.250em;
+}
+
+.comment-form .comment-form-comment:before {
+    font-family: 'fontawesome';
+    content: "\f075";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
+}
+
+.comment-form .comment-form-comment textarea {
+    border: 0.063em solid #cccccc;
+    font-family: 'Merriewather', serif;
+    font-size: 1em;
+    min-height: 12.375em;
+    width: 100%;
+}
+
+.comment-form .comment-form-author input[type="text"],
+.comment-form .comment-form-email input[type="email"] {
+    border: 0.063em solid #cccccc;
+    font-family: 'Merriewather', serif;
+    font-size: 1em;
+    padding: 0.6em;
+    width: 23em;
+}
+
+.comment-form .comment-form-url input[type="url"] {
+    border: 0.063em solid #cccccc;
+    font-family: 'Merriewather', serif;
+    font-size: 1em;
+    padding: 0.6em;
+    width: 100%;
+}
+
+.comment-form .comment-notes {
+    font-size: 12px;
+}
+
+p.comment-awaiting-moderation {
+    margin: 0.125em 0 0 4.063em;
+    padding: 0.188em 0.313em;
+}
+
+.comment-subscription-form .subscribe-label {
+    display: inline !important;
+    font-size: 0.875em;
+}
+
+.comment-form .comment-form-cookies-consent {
+    font-size: 14px;
+}
+
+.comment-form .comment-form-cookies-consent input[type="checkbox"] {
+    margin-right: 0.250em;
+}
 
 /*
 ===========================================================================================================
@@ -683,6 +993,33 @@ a:focus {
 22.0 - Media Area (Captions)
 ===========================================================================================================
 */
+.wp-caption {
+    max-width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wp-caption-text { 
+    text-align: center; 
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption {
+    background: #eeeeee;
+    font-size: 14px;
+    padding: 0.313em;
+    text-align: center;
+}
+
+.wp-caption p {
+    margin: 0;
+    padding: 0;
+}
 
 /*
 ===========================================================================================================
