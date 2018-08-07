@@ -114,6 +114,11 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+img {
+    height: auto;
+    max-width: 100%;
+}
+
 /*
 ===========================================================================================================
  3.0 - Forms
@@ -178,7 +183,7 @@ body {
 ===========================================================================================================
 */
 .site-container {
-    margin: 1.125em auto;
+    margin: 0 auto;
     max-width: 75.375em;
 }
 
@@ -399,7 +404,7 @@ a:focus {
 }
 
 .site-branding .site-title a {
-    font-size: 1.250em;
+    font-size: 1.125em;
 }
 
 .site-branding .site-description {
