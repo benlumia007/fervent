@@ -56,8 +56,6 @@ function fervent_theme_setup() {
     */   
     register_nav_menus(array(
         'primary-navigation'    => esc_html__('Primary Navigation', 'fervent'),
-        'secondary-navigation'  => esc_html__('Secondary Navigation', 'fervent'),
-        'social-navigation'     => esc_html__('Social Navigation', 'fervent')
     ));
 
     /*
