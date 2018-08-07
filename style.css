@@ -1038,6 +1038,59 @@ p.comment-awaiting-moderation {
 23.0 - Media Area (Galleries)
 ===========================================================================================================
 */
+.gallery.gallery-size-thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-7 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
+
+.gallery-columns-9 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125em;
+}
 
 /*
 ===========================================================================================================
