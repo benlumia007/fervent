@@ -1,11 +1,11 @@
 <?php
 /*
 ===========================================================================================================
-Fervent - framework.php
+Fervent - primary-navigation.php
 ===========================================================================================================
 This is the most generic template file in a WordPress theme and is one of the required files for a theme. 
-This framework.php template file allows you to add features and functionality that has been preset to be use 
-in this WordPress theme which is stored in the theme's framework directory in the theme folder.
+This primary-navigation.php template file allows you to add the primary navigation in the header by using
+do_action(); and keep the codes clean as possible. 
 
 @package        Fervent WordPress Theme
 @copyright      Copyright (C) 2018. Benjamin Lu
@@ -18,16 +18,27 @@ in this WordPress theme which is stored in the theme's framework directory in th
 ===========================================================================================================
 Table of Content
 ===========================================================================================================
- 1.0 - Require Files
+ 1.0 - Main Query (Content with Post Format)
 ===========================================================================================================
 */
 
 /*
 ===========================================================================================================
- 1.0 - Require Files
+ 1.0 - Main Query (Content with Post Format)
 ===========================================================================================================
 */
-require_once(get_template_directory() . '/framework/core/custom-header.php');
-require_once(get_template_directory() . '/framework/customize/control-radio-image.php');
-require_once(get_template_directory() . '/framework/loop/main-query.php');
-require_once(get_template_directory() . '/framework/menu/primary-navigation.php');
+function fervent_do_main_content_post_format_setup() {
+    do_action('fervent_do_main_content_post_format_setup');
+}
+
+function fervent_output_main_content_post_format_setup() {
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            get_template_part('template-parts/content', get_post_format());
+    endwhile;
+            the_posts_pagination();
+    else :
+            get_template_part('template-parts/content', 'none');
+    endif;
+}
+add_action('fervent_do_main_content_post_format_setup', 'fervent_output_main_content_post_format_setup');
