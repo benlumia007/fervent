@@ -27,3 +27,4 @@ Table of Content
  1.0 - Require Files
 ===========================================================================================================
 */
+require_once(get_template_template() . '/framework/core/custom-header.php');
