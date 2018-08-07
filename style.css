@@ -57,6 +57,53 @@ Table of Content
  1.0 - Typography
 ===========================================================================================================
 */
+h1 { 
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0.67em 0;
+}
+
+h2 {
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0.83em 0;
+}
+
+h3 { 
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.17em;
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+h4 { 
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 1.33em 0;
+}
+
+h5 { 
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: .83em;
+    font-weight: 700;
+    margin: 1.67em 0;
+}
+
+h6 { 
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: .67em;
+    font-weight: 700;
+    margin: 2.33em 0;
+}
 
 /*
 ===========================================================================================================
@@ -126,7 +173,6 @@ Table of Content
 ===========================================================================================================
 */
 .site-container {
-    border: 0.063em solid #000;
     margin: 1.125em auto;
     max-width: 75.375em;
 }
@@ -136,6 +182,10 @@ Table of Content
  8.0 - Navigation (Links)
 ===========================================================================================================
 */
+a {
+    color: #22a6ee;
+    text-decoration: none;
+}
 
 /*
 ===========================================================================================================
@@ -340,6 +390,10 @@ Table of Content
 
 .site-branding .site-title a {
     font-size: 1.125em;
+}
+
+.site-branding .site-description {
+    color: #22a6ee;
 }
 
 /*
