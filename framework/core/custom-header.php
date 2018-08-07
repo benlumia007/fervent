@@ -41,8 +41,8 @@ function fervent_custom_header_setup() {
         This will set height and width of the image and set the max width as well.
         ===================================================================================================
         */
-        'height'                 => 1170,
-        'width'                  => 300,
+        'height'                 => 300,
+        'width'                  => 1170,
         'max-width'             =>  2000,
         
         /*
