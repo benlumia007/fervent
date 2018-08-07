@@ -34,7 +34,7 @@ template files, WordPress may have default files or functions to perform their j
             <div id="main-navigation" class="main-navigation">
                 <?php if (has_nav_menu('primary-navigation')) { ?>
                     <nav id="site-navigation" class="primary-navigation">
-                        <button class="menu-toggle" aria-conrol="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'benjlu'); ?></button>
+                        <button class="menu-toggle" aria-conrol="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'fervent'); ?></button>
                         <?php wp_nav_menu(array(
                             'theme_location'    => 'primary-navigation',
                             'menu_id'           => 'primary-menu',
@@ -52,7 +52,11 @@ template files, WordPress may have default files or functions to perform their j
 
         </section>
         <footer id="site-footer" class="site-footer">
-
+            <div id="site-info" class="site-info">
+                <?php printf(esc_html__('Proudly Powered By: %s', 'fervent'), '<a href="https://wordpress.org">WordPress</a>'); ?><br />
+                <?php printf(esc_html__('Theme: %1$s By: %2$s.', 'fervent' ), 'Fervent', '<a href="https://luthemes.com/">Benjamin Lu</a>');
+                ?>
+            </div>
         </footer>
     </section>
     <?php wp_footer(); ?>
