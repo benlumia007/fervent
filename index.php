@@ -17,16 +17,46 @@ template files, WordPress may have default files or functions to perform their j
 */
 ?>
 <?php get_header(); ?>
-    <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'no-sidebar')); ?>">
-        <div id="content-area" class="content-area">
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <?php get_template_part('template-parts/content', get_post_format()); ?>
-            <?php endwhile; ?>
-                    <?php the_posts_pagination(); ?>
-            <?php else : ?>
-                    <?php get_template_part('template-parts/content', 'none'); ?>
-            <?php endif; ?>
-        </div>
-    </section>
+    <?php if ('left-sidebar' == get_theme_mod('global_layouts', 'left-sidebar')) { ?>
+        <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'left-sidebar')); ?>">
+            <div id="content-area" class="content-area">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('template-parts/content', get_post_format()); ?>
+                <?php endwhile; ?>
+                        <?php the_posts_pagination(); ?>
+                <?php else : ?>
+                        <?php get_template_part('template-parts/content', 'none'); ?>
+                <?php endif; ?>
+            </div>
+            <?php get_sidebar(); ?>
+        </section>
+    <?php } else if ('right-sidebar' == get_theme_mod('global_layouts', 'right-sidebar')) { ?>
+        <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'left-sidebar')); ?>">
+            <div id="content-area" class="content-area">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('template-parts/content', get_post_format()); ?>
+                <?php endwhile; ?>
+                        <?php the_posts_pagination(); ?>
+                <?php else : ?>
+                        <?php get_template_part('template-parts/content', 'none'); ?>
+                <?php endif; ?>
+            </div>
+            <?php get_sidebar(); ?>
+        </section>
+    <?php } else { ?>
+        <section id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'left-sidebar')); ?>">
+            <div id="content-area" class="content-area">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('template-parts/content', get_post_format()); ?>
+                <?php endwhile; ?>
+                        <?php the_posts_pagination(); ?>
+                <?php else : ?>
+                        <?php get_template_part('template-parts/content', 'none'); ?>
+                <?php endif; ?>
+            </div>
+        </section>
+    <?php } ?>
 <?php get_footer(); ?>
