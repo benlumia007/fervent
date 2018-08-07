@@ -187,6 +187,11 @@ a {
     text-decoration: none;
 }
 
+a:hover,
+a:focus {
+    color: #1f74a3;
+}
+
 /*
 ===========================================================================================================
  9.0 - Navigation (Primary Navigation)
@@ -389,7 +394,7 @@ a {
 }
 
 .site-branding .site-title a {
-    font-size: 1.125em;
+    font-size: 1.250em;
 }
 
 .site-branding .site-description {
