@@ -15,19 +15,19 @@ or index.
 */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php if ('no-sidebar' == get_theme_mod('global_layout', 'no-sidebar')) { ?>
+        <div class="entry-post-thumbnail">
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fervent-large-thumbnails'); ?></a>
+        </div>
+    <?php } else { ?>
+        <div class="entry-post-thumbnail">
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fervent-medium-thumbnails'); ?></a>
+        </div>
+    <?php } ?>
     <header class="entry-header">
         <?php the_title(sprintf('<h1 class="entry-title"><a href="%s">', esc_url(get_permalink())), '</a></h1>'); ?>
     </header>
     <span class="entry-timestamp"><?php echo fervent_entry_time_stamp_setup(); ?></span>
-    <?php if ('no-sidebar' == get_theme_mod('global_layout', 'no-sidebar')) { ?>
-        <div class="post-thumbnail">
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fervent-large-thumbnails'); ?></a>
-        </div>
-    <?php } else { ?>
-        <div class="post-thumbnail">
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fervent-medium-thumbnails'); ?></a>
-        </div>
-    <?php } ?>
     <div class="entry-excerpt">
         <?php the_excerpt(); ?>
         <div class="continue-reading">
