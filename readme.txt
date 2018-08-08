@@ -4,7 +4,7 @@ Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.9.8
 Tested up to: 5.0
-Stable tag: 0.0.7
+Stable tag: 0.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,10 +42,7 @@ Customizer
 
 Description
 ===============================================================================================================
-Fervent is a fully functional mobile friendly WordPress theme that allows you to create amazing 
-things such as photography portfolio or just a regular portfolio to your needs. It also includes 
-theme options that allows you to create a home page with a template that allows you to set as static 
-page to show your amazing work.
+Fervent is a fully functional mobile friendly WordPress theme that allows you to create amazing things.
 
 
 Frequently Asked Questions
@@ -55,6 +52,11 @@ Not Available.
 
 Changelog
 ===============================================================================================================
+Version: 0.0.8 
+- Add Featured Image to the correct loction
+- Add Image Size for Feature Images
+- Minor Tweaks
+
 Version: 0.0.7
 - Add 404
 - Add CSS Grid System for Galleries
