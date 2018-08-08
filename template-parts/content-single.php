@@ -15,9 +15,15 @@ content. This content.php is the main content that will be displayed.
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php if (has_post_thumbnail()) { ?>
-        <div class="entry-post-thumbnail">
-            <?php the_post_thumbnail('fervent-medium-thumbnails'); ?>
-        </div>
+        <?php if ('no-sidebar' == get_theme_mod('global_layout', 'no-sidebar')) { ?>
+            <div class="entry-post-thumbnail">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fervent-large-thumbnails'); ?></a>
+            </div>
+        <?php } else { ?>
+            <div class="entry-post-thumbnail">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('fervent-medium-thumbnails'); ?></a>
+            </div>
+        <?php } ?>
     <?php } ?>
     <header class="entry-header">
         <?php the_title(sprintf('<h1 class="entry-title">', '</h1>')); ?>

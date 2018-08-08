@@ -84,6 +84,14 @@ function fervent_theme_setup() {
 
     /*
     =======================================================================================================
+    add_image_size('fervent-medium-thumbnails', 810, 250, true); should be used under the following files, 
+    content-single.php and content-page.php
+    =======================================================================================================
+    */
+    add_image_size('fervent-medium-thumbnails', 810, 250, true);
+
+    /*
+    =======================================================================================================
     add_image_size('fervent-large-thumbnail', 1170, 300, true); should be used under the following files, 
     content-single.php and content-page.php
     =======================================================================================================
