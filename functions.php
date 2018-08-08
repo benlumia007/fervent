@@ -81,6 +81,14 @@ function fervent_theme_setup() {
     =======================================================================================================
     */
     add_theme_support('post-thumbnails');
+
+    /*
+    =======================================================================================================
+    add_image_size('fervent-large-thumbnail', 1170, 300, true); should be used under the following files, 
+    content-single.php and content-page.php
+    =======================================================================================================
+    */
+    add_image_size('fervent-large-thumbnails', 1170, 300, true);
 }
 add_action('after_setup_theme', 'fervent_theme_setup');
 /*
@@ -168,8 +176,8 @@ function fervent_register_sidebars_setup() {
         'id'            => 'primary-sidebar',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<div class="widget-header"><h2 class="widget-title">',
+        'after_title'   => '</h2></div>',
     ));
 }
 add_action('widgets_init', 'fervent_register_sidebars_setup');
