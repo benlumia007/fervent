@@ -459,6 +459,10 @@ a:focus {
     padding-bottom: 1em;
 }
 
+.content-area .entry-post-thumbnail {
+    margin-bottom: 0.563em;
+}
+
 .content-area .entry-header {
     border-bottom: 0.188em solid #22a6ee;
     margin-bottom: 0.313em;
