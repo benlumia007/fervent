@@ -4,7 +4,7 @@ Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.9.8
 Tested up to: 5.0
-Stable tag: 0.0.8
+Stable tag: 0.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,9 @@ Not Available.
 
 Changelog
 ===============================================================================================================
+Version: 0.0.9
+- Change Continue Reading and translation and remove wp_kses
+
 Version: 0.0.8 
 - Add Featured Image to the correct loction
 - Add Image Size for Feature Images
