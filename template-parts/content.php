@@ -36,8 +36,8 @@ or index.
             <a href="<?php echo esc_url(get_permalink()); ?>">
                 <?php
                     printf(
-                        wp_kses(esc_html__('Continue reading %s', 'fervent'), array('span' => array('class' => array()))),
-                        the_title('<span class="screen-reader-text">"', '"</span>', false)
+                        esc_html__('Continuing Reading %s', 'fervent'), 
+                        the_title('<span class="screen-reader-text">', '</span>', false)
                     );
                 ?>
             </a>
