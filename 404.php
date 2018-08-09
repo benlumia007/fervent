@@ -10,10 +10,10 @@ WordPress. Or it can be divided into modular template files, each taking on part
 If you do not provide other template files, WordPress may have default files or functions to
 perform their jobs.
 
-@package        fervent WordPress Theme
-@copyright      Copyright (C) 2017. Benjamin Lu
-@license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://www.fervent.com/)
+@package        Fervent WordPress Theme
+@copyright      Copyright (C) 2018. Benjamin Lu
+@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+@author         Benjamin Lu (https://luthemes.com/)
 ================================================================================================
 */
 ?>
