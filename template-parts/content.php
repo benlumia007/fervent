@@ -36,7 +36,7 @@ or index.
             <a href="<?php echo esc_url(get_permalink()); ?>">
                 <?php
                     printf(
-                        esc_html__('Continuing Reading %s', 'fervent'), 
+                        esc_html__('Continue Reading %s', 'fervent'), 
                         the_title('<span class="screen-reader-text">', '</span>', false)
                     );
                 ?>
