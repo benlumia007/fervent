@@ -1,11 +1,11 @@
 <?php
 /*
 ===========================================================================================================
-Fervent - primary-navigation.php
+Fervent - main-query.php
 ===========================================================================================================
 This is the most generic template file in a WordPress theme and is one of the required files for a theme. 
-This primary-navigation.php template file allows you to add the primary navigation in the header by using
-do_action(); and keep the codes clean as possible. 
+This main-query.php template file allows you to add the main query for index.php, single.php and page.php in
+its correct location by using the do_action(); and keep the codes clean as possible. 
 
 @package        Fervent WordPress Theme
 @copyright      Copyright (C) 2018. Benjamin Lu
