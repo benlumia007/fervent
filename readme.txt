@@ -52,6 +52,10 @@ Not Available.
 
 Changelog
 ===============================================================================================================
+Version: 0.1.0 
+- Minor Change to the Description for the main-query.php
+- Bump to Version: 0.1.0
+
 Version: 0.0.9
 - Change Continue Reading and translation and remove wp_kses
 
